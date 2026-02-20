@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Feedback Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- LEFT PANEL (Form) -->
+    <div class="glass-card form-panel">
+        <h2>Product Feedback Form</h2>
+
+        <form id="feedbackForm">
+
+            <label>Name</label>
+            <input type="text" id="name" required>
+
+            <label>Age Group</label>
+            <select id="age">
+                <option value="18-25">18–25</option>
+                <option value="26-40">26–40</option>
+                <option value="41+">41+</option>
+            </select>
+
+            <label>Overall Satisfaction (1–5)</label>
+            <input type="number" id="satisfaction" min="1" max="5" required>
+
+            <label>Product Quality (1–5)</label>
+            <input type="number" id="quality" min="1" max="5" required>
+
+            <label>Price Satisfaction (1–5)</label>
+            <input type="number" id="price" min="1" max="5" required>
+
+            <label>Would You Recommend? (1–5)</label>
+            <input type="number" id="recommend" min="1" max="5" required>
+
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+    </div>
+
+    <!-- RIGHT PANEL (Charts) -->
+    <div class="glass-card chart-panel">
+        <h2>Analytics Dashboard</h2>
+        <canvas id="feedbackChart"></canvas>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
